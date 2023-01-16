@@ -1,0 +1,21 @@
+**What is UFW?**
+
+it means "Uncomplicated Firewall" and refers to an application that aims to set rules in the native firrewall tables in Linux, which is call "iptables". Due iptables has a complex syntax, using UFW to configure it is really helpfull.
+
+**Install and config UFW**
+
+Firts refresh the APT cache, with that we are gonna check for recent updates. We use the next command.
+
+-sudo apt update
+
+Then we install the UFW on Debian, we use the next command.
+
+-sudo apt install ufw
+
+By default ufw is not actived, then we have to active. We use the next command.
+
+-sudo ufw enable
+
+Then we have to define the rules. In this case we have to allow port number 4242 in UFW. We run the next command.
+
+-sudo ufw allow 4242

@@ -1,0 +1,59 @@
+**Install Sudo**
+
+Firts of all we swicht to root using su command.
+
+- su -
+
+It will ask for the password of the root user that you specified during the installation of Debian.
+
+Then we use the next command to install sudo package.
+
+- apt-get install sudo
+
+**Config sudo**
+
+We have to add the user in the sudo group, in my case, my user is jpelaez-. Run this command.
+
+- sudo usermod -aG groupname username
+
+In my case is:
+
+- sudo usermod -aG sudo jpelaez-
+
+If we want to check if our user name is in the group, we use the next command:
+
+- sudo getent group sudo
+
+*Create a group*
+
+We have to create a new group with the name of user42, if we want to create a new group we use the next command.
+
+- sudo groupadd groupname
+
+In my case:
+
+- sudo groupadd user42
+
+Finally we add our username to that group.
+
+- sudo usermod -aG user42 jpelaez-
+
+**Set up a strong configuration for sudo group**
+
+We need to set up a strong configuration for our sudo group. We have to check the file configuration to modify the behavior of sudo command, this file we can find in /etc/sudoers/. Firts we can check the file, with the next command.
+
+- sudo cat /etc/sudoers
+
+If we want to modify the file we must to edited with "visudo".
+
+- sudo visudo /etc/sudoers
+
+If we want to modify the behavior of sudo command we have to use **Defaults** entries. We have to add the next rules.
+
+*Defaults   secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
+Defaults    requiretty
+Defaults    logfile="/var/log/sudo/"
+Defaults    badpass_message="Clave Incorrecta"
+
+
+

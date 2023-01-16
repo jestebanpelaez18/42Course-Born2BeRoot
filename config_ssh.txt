@@ -1,0 +1,51 @@
+**What is SSH?**
+
+It means Secure Shell. With this, we can securely establish 
+conecctions with other devices, for example from a PC to a 
+web server.
+
+**Install our SSH in Debian**
+
+Firts refresh the APT cache, with that we are gonna check for recent updates. We use the next command.
+
+-sudo apt update
+
+Then we install the openSSH server on Debian, we use the next command.
+
+-sudo apt install openssh-server
+
+Finally we are gonna check the status of the server, and if this is active. Run the next command.
+
+-sudo systemctl status sshd
+
+In the case that the status is not active, run the next command.
+
+-sudo systemctl enable --now sshd
+
+Also we allow SSH in the firewall, to let the system accept the public conecctions over the port. Run the next command.
+
+-sudo ufw allow ssh
+
+**Config our SSH**
+
+Firts of all, we have to open the SSH configuration file, because we want to replace the port used to estalish an SSH connection. By default, the port 22 is used for that. The subject is asking for the port 4242, soo lets do it.
+
+For open the configuration file we have to use a text editor, in my case i used EMACS. I Ran the next command.
+
+-sudo emacs /etc/ssh/sshd_config
+
+Then we have to check for the entry Port 22 and replace that one for Port 4242, without Hash(#). Finally we save the file and restart the service, i ran the next command.
+
+-sudo service ssh restart  
+
+Finally we have to delete a UFW rule, which allow the port 22. Firts of all we run the next command.
+
+-sudo ufw status numbered 
+
+This command outputs shows list of all UFW rules and their numbers in the firts column. Once we have this, we are gonna delete the rules that allow the port 22 and leave the rules that allow the port 4242. We run the next command.
+
+-sudo ufw delete (rule number here)
+
+Finally we need to confirm that everything is correct, we have to check the ufw status.
+
+-sudo ufw status numbered
