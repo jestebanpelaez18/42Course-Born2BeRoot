@@ -54,6 +54,8 @@ If we want to modify the behavior of sudo command we have to use **Defaults** en
 Defaults    requiretty
 Defaults    logfile="/var/log/sudo/"
 Defaults    badpass_message="Clave Incorrecta"
-
+Defaults    passwd_tries=3
+Defaults    log_input,log_output
+* 
 
 
