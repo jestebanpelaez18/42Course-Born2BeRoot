@@ -29,3 +29,7 @@ The we run the next command to enter cronjob:
 Now we have to type the next message, if we wan to run the program every 10 minutes:
 
 - 
+
+If we want to run the script, we type the next command:
+
+- sudo /usr/local/bin/monitoring.sh
