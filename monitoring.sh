@@ -10,6 +10,6 @@ wall "  #Architecture: $(uname -a)
         #LVM use: $([ $(lsblk | grep lvm | wc -l) -eq 0 ] && echo no || echo yes)
         #Connections TCP: $(netstat -nat | grep | awk '{print $6}')
         #User log: $(users | wc -l)
-        #Network: IP $(hostname -I) ($(ifconfig | grep ether | awk '{print $2}'))
+        #Network: IP $(hostname -I) ($(ip link show | grep ether | awk '{print $2}'))
         #Sudo: $(journalctl _COMM=sudo | grep COMMAND | wc -l) cmd
     "
