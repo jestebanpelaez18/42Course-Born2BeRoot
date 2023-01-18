@@ -19,3 +19,7 @@ By default ufw is not actived, then we have to active. We use the next command.
 Then we have to define the rules. In this case we have to allow port number 4242 in UFW. We run the next command.
 
 -sudo ufw allow 4242
+
+Finally we check the status with the next command:
+
+-sudo ufw status numbered
