@@ -1,0 +1,31 @@
+**Install crontab**
+
+The script will display some information (listed below) on all terminals every 10 minutes.
+For that we have to install crontab.
+
+- sudo apt-get update
+- sudo apt-get install cron
+
+**Create the script**
+
+Then we type:
+
+- cd /usr/local/bin/
+
+Then we write the script:
+
+- emacs monitoring.sh
+
+Finally we give all the permissions:
+
+- chmod 777 monitoring.sh
+
+**Enter to cronjob**
+
+The we run the next command to enter cronjob:
+
+- sudo crontab -e
+
+Now we have to type the next message, if we wan to run the program every 10 minutes:
+
+- 
