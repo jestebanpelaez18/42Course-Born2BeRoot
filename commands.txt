@@ -58,4 +58,6 @@ hostnamectl set-hostname new_hostname
 
 sudo reboot
 
+**Check partitions**
 
+lsblk
