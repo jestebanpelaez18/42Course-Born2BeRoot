@@ -52,10 +52,21 @@ If we want to modify the behavior of sudo command we have to use **Defaults** en
 
 *Defaults   secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
 Defaults    requiretty
-Defaults    logfile="/var/log/sudo/"
+Defaults    logfile="/var/log/sudo/sudo.log"
 Defaults    badpass_message="Clave Incorrecta"
 Defaults    passwd_tries=3
 Defaults    log_input,log_output
 * 
 
 
+Also we have to create the log file. Firts of all we are gonna run the next command:
+
+- cd /var/log/
+
+Once we are in that directory, we create other directory called sudo:
+
+- mkdir sudo
+
+Inside of that directory we create the log file:
+
+- touch sudo.log

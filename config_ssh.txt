@@ -38,6 +38,10 @@ Then we have to check for the entry Port 22 and replace that one for Port 4242, 
 
 -sudo service ssh restart  
 
+Check if everything is ok:
+
+- sudo grep Port /etc/ssh/sshd_config
+
 Finally we have to delete a UFW rule, which allow the port 22. Firts of all we run the next command.
 
 -sudo ufw status numbered 
