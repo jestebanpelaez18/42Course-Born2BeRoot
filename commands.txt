@@ -1,4 +1,49 @@
+**Check the operating system**
+
+cat /etc/os-release
+
 **Check if sudo is installed**
 
 dpkg -l | grep sudo
+
+**Check if UFW or SSH is started**
+
+sudo systemctl status ufw  or  sudo systemctl status sshd
+
+**Create a new user**
+
+sudo adduser new_user
+
+**Create new group**
+
+sudo groupadd groupname
+
+**Add user to a group**
+
+sudo usermod -aG groupname username
+
+**Check if a username is in a group**
+
+sudo getent group groupname
+
+**Check the rules for the UFW**
+
+sudo UFW status numbered
+
+**Add a rule for the UFW**
+
+sudo ufw allow port_number
+
+**Delete rule UFW**
+
+sudo ufw delete (rule number)
+
+**Check the SSH port**
+
+sudo grep Port /etc/ssh/sshd_config or sudo service ssh status
+
+**Log in ssh with user**
+
+ssh -p port_number username@127.0.0.1
+
 
