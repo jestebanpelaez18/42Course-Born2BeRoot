@@ -1,0 +1,4 @@
+**Check if sudo is installed**
+
+dpkg -l | grep sudo
+
