@@ -46,4 +46,16 @@ sudo grep Port /etc/ssh/sshd_config or sudo service ssh status
 
 ssh -p port_number username@127.0.0.1
 
+**Check the hostname**
+
+hostname
+
+**Change the hostname**
+
+hostnamectl set-hostname new_hostname
+
+**Reset VM**
+
+sudo reboot
+
 
