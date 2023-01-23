@@ -61,3 +61,13 @@ sudo reboot
 **Check partitions**
 
 lsblk
+
+**Enter to crontab**
+
+-sudo crontab -e 
+
+**Password**
+
+sudo apt-get install libpam-pam_pwquality
+sudo emacs /etc/pam.d/common-password
+sudo  emacs /etc/login.defs
