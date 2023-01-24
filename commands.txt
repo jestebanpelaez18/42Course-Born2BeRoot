@@ -65,16 +65,28 @@ lsblk
 **Enter to crontab**
 
 -sudo crontab -e 
+
+**Stop crontab**
+
 -sudo cronstop
--sudo cronstat
+
+**Restart crontab**
+
+-sudo cronstar
 
 **Password**
 
+*Get the library*
+
 sudo apt-get install libpam-pam_pwquality
+
+*Files of the password*
+
 sudo emacs /etc/pam.d/common-password
 sudo  emacs /etc/login.defs
 
 *Check the password rules*
+
 sudo chage -l username
 
 **Check sudo stric rules**

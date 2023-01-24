@@ -28,7 +28,7 @@ Also we allow SSH in the firewall, to let the system accept the public conecctio
 
 **Config our SSH**
 
-Firts of all, we have to open the SSH configuration file, because we want to replace the port used to estalish an SSH connection. By default, the port 22 is used for that. The subject is asking for the port 4242, soo lets do it.
+Firts of ≈all, we have to open the SSH configuration file, because we want to replace the port used to estalish an SSH connection. By default, the port 22 is used for that. The subject is asking for the port 4242, soo lets do it.
 
 For open the configuration file we have to use a text editor, in my case i used EMACS. I Ran the next command.
 
