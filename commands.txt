@@ -1,14 +1,37 @@
+*BASIC COMMANDS*
+
 **Check the operating system**
 
 cat /etc/os-release
+uname -a
 
 **Check if sudo is installed**
 
 dpkg -l | grep sudo
 
+**Check sudo stric rules**
+
+sudo visudo /etc/sudoers
+
+**Check if there is a graphical enviroment in the launc**
+
+systemctl status display-manager
+
 **Check if UFW or SSH is started**
 
 sudo systemctl status ufw  or  sudo systemctl status sshd
+
+**Reset VM**
+
+sudo reboot
+
+**Check partitions**
+
+lsblk
+
+
+
+*USER AND GROUP COMMANDS*
 
 **Create a new user**
 
@@ -26,6 +49,10 @@ sudo usermod -aG groupname username
 
 sudo getent group groupname
 
+
+
+*UFW COMMANDS*
+
 **Check the rules for the UFW**
 
 sudo UFW status numbered
@@ -38,6 +65,10 @@ sudo ufw allow port_number
 
 sudo ufw delete (rule number)
 
+
+
+*SSH COMMANDS*
+
 **Check the SSH port**
 
 sudo grep Port /etc/ssh/sshd_config or sudo service ssh status
@@ -45,6 +76,10 @@ sudo grep Port /etc/ssh/sshd_config or sudo service ssh status
 **Log in ssh with user**
 
 ssh -p port_number username@127.0.0.1
+
+
+
+*HOSTNAME COMMANDS*
 
 **Check the hostname**
 
@@ -54,13 +89,9 @@ hostname
 
 hostnamectl set-hostname new_hostname
 
-**Reset VM**
 
-sudo reboot
 
-**Check partitions**
-
-lsblk
+*CRONTAB COMMANDS*
 
 **Enter to crontab**
 
@@ -74,7 +105,9 @@ lsblk
 
 -sudo cronstar
 
-**Password**
+
+
+*PASSWORD COMMANDS*
 
 *Get the library*
 
@@ -89,6 +122,14 @@ sudo  emacs /etc/login.defs
 
 sudo chage -l username
 
-**Check sudo stric rules**
 
-sudo visudo /etc/sudoers
+
+*MONITORING COMMANDS*
+
+**Folder**
+
+/usr/local/bin/
+
+**Run the script**
+
+sudo /usr/local/bin/monitoring.sh
