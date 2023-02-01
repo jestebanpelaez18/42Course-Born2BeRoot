@@ -29,6 +29,10 @@ sudo reboot
 
 lsblk
 
+**Check AppArmor**
+
+aa-status
+
 
 
 *USER AND GROUP COMMANDS*
